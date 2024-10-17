@@ -15,7 +15,7 @@ const app= express();
 config({path:"./config/config.env"})
 
 app.use(cors({
-    origin:[process.env.https://resilient-treacle-6ea520.netlify.app,process.env.DASHBOARD_URL],
+    origin:[process.env.DASHBOARD_URL,process.env.DASHBOARD_URL],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
 
