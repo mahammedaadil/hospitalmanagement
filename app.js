@@ -11,7 +11,9 @@ import  appointmentRouter from "./router/appointmentRouter.js";
 
 
 const app= express();
-
+app.listen(process.env.PORT,() => {
+    console.log(`Server Listening At port ${process.env.PORT}`);
+});
 config({path:"./config/config.env"})
 
 app.use(cors({
@@ -42,8 +44,6 @@ dbConnection();
 
 app.use(errorMiddleware);
 
-app.listen(process.env.PORT,() => {
-    console.log(`Server Listening At port ${process.env.PORT}`);
-});
+
 
 export default app;
