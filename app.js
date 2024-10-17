@@ -42,4 +42,8 @@ dbConnection();
 
 app.use(errorMiddleware);
 
+app.listen(process.env.PORT,() => {
+    console.log(`Server Listening At port ${process.env.PORT}`);
+});
+
 export default app;
